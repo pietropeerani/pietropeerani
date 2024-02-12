@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { instagram } from '../../utils/personalData';
+import { githubProfile, instagram } from '../../utils/personalData';
 
 interface commandsProps {
     cmd: string[];
@@ -13,9 +13,15 @@ export const commands: commandsProps[] = [
     {
         cmd: ['about', 'help'],
         description: 'Displays information about the app',
-        render: true,
         action: (navigate) => {
             navigate("/about");
+        }
+    },
+    {
+        cmd: ['whoami'],
+        description: 'Displays information about the app',
+        action: (navigate) => {
+            navigate("/");
         }
     },
     {
@@ -23,6 +29,20 @@ export const commands: commandsProps[] = [
         description: 'Displays information about the app',
         action: () => {
             window.open(instagram, "_blank");
+        }
+    },
+    {
+        cmd: ['github'],
+        description: 'Displays information about the app',
+        action: () => {
+            window.open(githubProfile, "_blank");
+        }
+    },
+    {
+        cmd: ['game', 'snake'],
+        description: '',
+        action: (navigate) => {
+            navigate("/snake");
         }
     },
 ];
