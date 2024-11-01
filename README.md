@@ -16,7 +16,7 @@ I’m always open to feedback and collaborations, so feel free to reach out if y
 
 ---
 
-## Link me
+### Link me
 ![My Skills](https://skillicons.dev/icons?i=js,ts,css,sass,svelte,react,next,angular,electron,tailwind,php,azure,python,c,cpp,raspberrypi,figma,xd,arch)
 
 [![Resume](https://img.shields.io/badge/Resume-FFFFFF?style=for-the-badge&logo=googledocs&logoColor=black)](#)
