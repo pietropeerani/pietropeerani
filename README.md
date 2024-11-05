@@ -17,7 +17,8 @@ I’m always open to feedback and collaborations, so feel free to reach out if y
 ---
 
 ### Link me
-![My Skills](https://skillicons.dev/icons?i=js,ts,css,sass,svelte,react,next,angular,electron,tailwind,php,azure,python,c,cpp,raspberrypi,figma,xd,arch)
+![My Skills](https://skillicons.dev/icons?i=js,ts,css,sass,svelte,react,next,angular,electron,tailwind)
+![My Skills](https://skillicons.dev/icons?i=php,azure,python,c,cpp,raspberrypi,vscode,figma,xd,arch)
 
 [![Resume](https://img.shields.io/badge/Resume-FFFFFF?style=for-the-badge&logo=googledocs&logoColor=black)](#)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/pietro.peerani)
