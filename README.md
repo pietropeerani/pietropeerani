@@ -5,7 +5,7 @@
 <br/>
 
 
-I'm **Pietro**, a student at UniFe, studying Computer Scince. I'm passionate about technology and programming, with a particular interest in web development and algorithms.
+I'm **Pietro**, a student at UniFe, studying Computer Science. I'm passionate about technology and programming, with a particular interest in web development and algorithms.
 I’m always open to feedback and collaborations, so feel free to reach out if you want to discuss technology or exchange ideas!
 
 ---
