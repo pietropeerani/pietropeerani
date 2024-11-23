@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-mono text-white font-semibold;
+}
+
+::selection {
+    @apply bg-white text-black;
+}
+
+/* GENERAL STYLE */
+Link, a {
+    @apply hover:underline text-[#C3C7F4];
+}

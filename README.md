@@ -1,6 +1,6 @@
 ### 👋 Hi there
 <div>
-    <img src="./imgs/dino.gif"/>
+    <img src="./public/dino.gif"/>
 </div>
 <br/>
 
