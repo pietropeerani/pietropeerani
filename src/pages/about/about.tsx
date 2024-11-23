@@ -3,7 +3,7 @@ import { version } from '../../../package.json'
 import { commands } from '../../components/command/command'
 
 interface socialProps {
-    [key : string]: {
+    [key: string]: {
         user: string,
         href: string
     }
@@ -39,18 +39,21 @@ export default function About() {
                 <div className='max-md:hidden'>
                     <h2 className='text-center text-[#FFDDC0] mb-2'>Commands</h2>
                     {
-                        commands.map((item, index) => (
-                            <div key={index} className='flex'>
-                                <span className='w-1/2'>
-                                {item.cmd}<span className='text-[#C3C7F4]'>{"<Enter>"}</span>
-                                </span>
-                                <span className='text-neutral-400'>{item.description}</span>
-                            </div>
-                        ))
+                        commands.map((item, index) => {
+                            if (item.render)
+                                return (
+                                    <div key={index} className='flex'>
+                                        <span className='w-1/2'>
+                                            <span>:</span>{item.cmd}<span className='text-[#C3C7F4]'>{"<Enter>"}</span>
+                                        </span>
+                                        <span className='text-neutral-400'>{item.description}</span>
+                                    </div>
+                                )
+                        })
                     }
                 </div>
                 <span className='text-neutral-400 text-sm'>Inspired by Neovim</span>
             </div>
-        </div>
+        </div >
     )
 }

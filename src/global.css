@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* GENERAL STYLE */
 * {
     @apply font-mono text-white font-semibold;
 }
@@ -12,7 +13,6 @@
     @apply bg-white text-black;
 }
 
-/* GENERAL STYLE */
 Link, a {
     @apply hover:underline text-[#C3C7F4];
 }

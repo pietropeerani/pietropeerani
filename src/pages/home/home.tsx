@@ -26,6 +26,7 @@ const data: dateRow[] = [
 export default function Home() {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [dateColumnWidth, setdateColumnWidth] = useState<number>(0);
+    const [isEscPressed, setIsEscPressed] = useState(false);
     const tableRef = useRef<HTMLDivElement | null>(null);
     const dateColumnRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,6 +36,9 @@ export default function Home() {
                 setSelectedIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : (prevIndex === null ? 0 : Math.min(prevIndex + 1, data.length - 1))));
             } else if (event.key === "ArrowUp" || event.key === "k") {
                 setSelectedIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : (prevIndex === null ? data.length - 1 : Math.max(prevIndex - 1, 0))));
+            } else if (event.key === "Escape") {
+                setIsEscPressed(true);
+                setSelectedIndex(null);
             }
         };
 
@@ -47,6 +51,11 @@ export default function Home() {
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
+            if (isEscPressed) {
+                setIsEscPressed(false);
+                return;
+            }
+
             if (tableRef.current && !tableRef.current.contains(event.target as Node)) {
                 setSelectedIndex(null);
             }
@@ -57,7 +66,7 @@ export default function Home() {
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-    }, []);
+    }, [isEscPressed]);
 
     const handleMouseEnter = (index: number) => {
         setSelectedIndex(index);
@@ -69,7 +78,6 @@ export default function Home() {
             setdateColumnWidth(maxWidth * 10);
         }
     }, []);
-
 
     return (
         <div className="flex max-md:flex-col justify-between">
