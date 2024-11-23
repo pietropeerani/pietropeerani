@@ -19,6 +19,7 @@ export default function App() {
           <div className="mt-4 relative flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/pietropeerani" element={<Home />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </div>
