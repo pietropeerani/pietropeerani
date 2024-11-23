@@ -1,17 +1,20 @@
 {
-  "homepage": "https://pietropeerani.github.com/pietropeerani",
+  "homepage": "https://pietropeerani.github.com/pietropeerani/",
   "name": "v0.2",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@types/css-modules": "^1.0.5",
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.1",
