@@ -7,13 +7,10 @@ import Footer from "./components/footer/footer"
 import Command from "./components/command/command"
 
 export default function App() {
-  // select page color
-  document.body.style.backgroundColor = "black"
-
   return (
-    <Router>
+    <Router basename="/pietropeerani">
       <main className="h-screen p-4 pb-2 flex flex-col">
-        <section className="relative flex flex-col p-4 pb-2 flex-grow border-2 border-white">
+        <section className="relative flex flex-col p-4 pb-2 flex-grow border-2 border-txPrimary">
           <Header />
           <Navbar />
           <div className="mt-4 relative flex-grow">

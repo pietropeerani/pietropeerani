@@ -22,7 +22,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="flex-shrink-0 pt-2 select-none">
+        <footer className="flex-shrink-0 pt-2 select-none text-sm">
             By Pietro Peerani | {time} | <ThemeChanger />
         </footer>
     )

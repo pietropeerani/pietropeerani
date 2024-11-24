@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme="dark"] {
+  --selection-bg: #fff;
+  --selection-tx: #000;
+
+  --tx-title: #ffddc0;
+  --tx-primary: #fff;
+  --tx-secondary: #a3a3a3;
+  --tx-link: #c3c7f4;
+
+  --bg-primary: #000;
+  --body: #000;
+  --bg-secondary: #212121;
+  --bg-table-select: #323232;
+
+  --logo: #fff;
+
+  --nav-bg: #fff;
+  --nav-tx: #000;
+
+  --window-bg: #323232;
+  --window-border: #fff; 
+}
+
+[data-theme="light"] {
+  --selection-bg: #000;
+  --selection-tx: #fff;
+
+  --tx-title: #fd9942;
+  --tx-primary: #000;
+  --tx-secondary: #a3a3a3;
+  --tx-link: #0fa47f;
+
+  --bg-primary: #fff;
+  --body: #fff;
+  --bg-secondary: #eee;
+  --bg-table-select: #eee;
+
+  --logo: #000;
+
+  --nav-bg: #000;
+  --nav-tx: #fff;
+
+  --window-bg: #eee;
+  --window-border: #323232;
+}

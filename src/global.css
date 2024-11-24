@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,13 +6,23 @@
 
 /* GENERAL STYLE */
 * {
-    @apply font-mono text-white font-semibold;
+  @apply font-mono text-txPrimary font-semibold;
+}
+
+html,
+body {
+  background-color: var(--body);
 }
 
 ::selection {
-    @apply bg-white text-black;
+  @apply bg-selectionBg text-selectionTx;
 }
 
-Link, a {
-    @apply hover:underline text-[#C3C7F4];
+*::-webkit-scrollbar {
+  @apply w-0;
+}
+
+Link,
+a {
+  @apply hover:underline text-txLink;
 }

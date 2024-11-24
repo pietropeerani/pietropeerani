@@ -13,13 +13,11 @@ export default function Navbar() {
         }
     ];
 
-    // Stato per tenere traccia del tasto attivo
     const [, setActiveIndex] = useState<number | null>(null);
 
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Effetto per gestire i keypress
     useEffect(() => {
         const handleKeyPress = (e: any) => {
             const key = parseInt(e.key, 10); 
@@ -39,13 +37,12 @@ export default function Navbar() {
     return (
         <div className="flex gap-4">
             {items.map((item, index) => {
-                // Controlla se l'elemento è attivo
                 const isActive = location.pathname === item.href; 
                 return (
                     <Link
                         key={index}
                         to={item.href}
-                        className={`text-[#C3C7F4] px-3 py-2 hover:no-underline ${isActive && 'bg-white text-black'}`}
+                        className={`text-txLink px-3 py-2 hover:no-underline ${isActive && 'bg-navBg !text-navTx'}`}
                     >
                         ({index}) {item.name}
                     </Link>
