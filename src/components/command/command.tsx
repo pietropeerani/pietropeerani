@@ -20,7 +20,7 @@ export const commands: commandsProps[] = [
         cmd: ['instagram', 'insta'],
         description: 'Displays information about the app',
         action: () => {
-            window.open("https://instagram.com/pietro.peerani", "_blank")
+            window.open("https://instagram.com/pietro.peerani", "_blank");
         }
     },
 ];
@@ -29,12 +29,23 @@ export default function Command() {
     const [isEditing, setIsEditing] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [showInput, setShowInput] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [errorTimeout, setErrorTimeout] = useState<number | null>(null);
+
+    const errorTimer: number = 3;
 
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleKeyDown = (event: any) => {
-        if (event.key === ':' && document.activeElement !== inputRef.current) {
+        if (event.key === ':' && !showInput && !errorMessage) {
             event.preventDefault();
+            setShowInput(true);
+            setIsEditing(true);
+            setInputValue('');
+            setErrorMessage('');
+        } else if (event.key === ':' && errorMessage) {
+            event.preventDefault();
+            setErrorMessage('');
             setShowInput(true);
             setIsEditing(true);
             setInputValue('');
@@ -42,38 +53,55 @@ export default function Command() {
             setShowInput(false);
             setIsEditing(false);
             setInputValue('');
+            setErrorMessage('');
         } else if (event.key === 'Enter' && isEditing) {
             const command = commands.find(cmd => cmd.cmd.some(c => c.toLowerCase() === inputValue.trim().toLowerCase()));
 
             if (command) {
                 command.action();
+                setErrorMessage('');
             } else {
-                console.error(`Command not found: ${inputValue}`);
+                setErrorMessage(`Comando non trovato: ${inputValue}`);
+                
+                if (errorTimeout) clearTimeout(errorTimeout);
+                const timeout = setTimeout(() => {
+                    setErrorMessage('');
+                }, errorTimer * 1000);
+                setErrorTimeout(timeout);
             }
 
             setShowInput(false);
             setIsEditing(false);
             setInputValue('');
+        } else if ((event.key === 'Backspace' || event.key === 'Delete') && inputValue === '') {
+            setShowInput(false);
+            setIsEditing(false);
+            setInputValue('');
+            setErrorMessage('');
         }
     };
 
     const handleChange = (event: any) => {
         setInputValue(event.target.value);
-        if (event.target.value === '') {
-            setShowInput(false);
-        }
     };
 
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown);
 
+        if (showInput && inputRef.current) {
+            inputRef.current.focus();
+        }
+
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [isEditing, inputValue]);
+    }, [isEditing, inputValue, errorMessage, showInput]);
 
     return (
         <div>
+            {errorMessage && (
+                <div className="error-message text-red-500">{errorMessage}</div>
+            )}
             {
                 showInput && (
                     <form
@@ -83,8 +111,15 @@ export default function Command() {
                             const command = commands.find(cmd => cmd.cmd.some(c => c.toLowerCase() === inputValue.trim().toLowerCase()));
                             if (command) {
                                 command.action();
+                                setErrorMessage('');
                             } else {
-                                console.error(`Command not found: ${inputValue}`);
+                                setErrorMessage(`Comando non trovato: ${inputValue}`);
+                                
+                                if (errorTimeout) clearTimeout(errorTimeout);
+                                const timeout = setTimeout(() => {
+                                    setErrorMessage('');
+                                }, 3000);
+                                setErrorTimeout(timeout);
                             }
 
                             setShowInput(false);
@@ -92,7 +127,7 @@ export default function Command() {
                             setInputValue('');
                         }}
                     >
-                        <span>:</span>
+                        {!errorMessage && <span>:</span>}
                         <input
                             ref={inputRef}
                             type="text"
