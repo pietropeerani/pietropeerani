@@ -47,3 +47,26 @@
   --window-bg: #eee;
   --window-border: #323232;
 }
+
+[data-theme="gruvbox"] {
+  --selection-bg: #ebdbb2;
+  --selection-tx: #282828;
+
+  --tx-title: #fb4934;
+  --tx-primary: #ebdbb2;
+  --tx-secondary: #ebdbb280;
+  --tx-link: #fe8019;
+
+  --bg-primary: #282828;
+  --body: #282828;
+  --bg-secondary: #3c383680;
+  --bg-table-select: #3c383680;
+
+  --logo: #ebdbb2;
+
+  --nav-bg: #504945;
+  --nav-tx: #89b482;
+
+  --window-bg: #3c383680;
+  --window-border: #505954;
+}
