@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const themes = [
-    "dark", "light"
+    "dark", "light", "gruvbox", "catppuccin"
 ]
 
 export default function ThemeChanger() {

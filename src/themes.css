@@ -70,3 +70,26 @@
   --window-bg: #3c383680;
   --window-border: #505954;
 }
+
+[data-theme="catppuccin"] {
+  --selection-bg: #cba6f7;
+  --selection-tx: #11111b;
+
+  --tx-title: #cba6f7;
+  --tx-primary: #cdd6f4;
+  --tx-secondary: #bac2de;
+  --tx-link: #cba6f7;
+
+  --bg-primary: #11111b;
+  --body: #11111b;
+  --bg-secondary: #3c383680;
+  --bg-table-select: #3c383680;
+
+  --logo: #cba6f7;
+
+  --nav-bg: #1e1e2e;
+  --nav-tx: #89b4fa;
+
+  --window-bg: #3c383680;
+  --window-border: #313244;
+}
