@@ -54,12 +54,12 @@ export default function ThemeChanger() {
             {isMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="absolute bottom-full mb-2 max-md:right-[-1px] w-48 bg-body text-white border-2 border-white"
+                    className="absolute bottom-full mb-2 max-md:right-[-1px] w-48 bg-body text-white border-2 border-txPrimary"
                 >
                     <ul className="list-none">
                         {
                             themes.map((item, index) => (
-                                <li key={index} className="p-2 hover:bg-white hover:text-black cursor-pointer"
+                                <li key={index} className="p-2 hover:bg-txPrimary hover:text-body cursor-pointer"
                                     onClick={() => changeTheme(item)}
                                 >
                                     {item}

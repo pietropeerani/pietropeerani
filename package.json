@@ -2,7 +2,7 @@
   "homepage": "https://pietropeerani.github.io/pietropeerani/",
   "name": "portfolio",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
