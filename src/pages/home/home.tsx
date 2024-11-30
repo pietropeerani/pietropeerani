@@ -12,13 +12,13 @@ interface dateRow {
 const data: dateRow[] = [
   {
     title: "automation olympics",
-    date: "2024-11-01",
+    date: "04-06-2024",
     description: `The project team leader for a system that simulates the operation of a hydroelectric dam, utilizing two real Pelton and Francis turbines within the school to reproduce the energy generation process in a controlled and safe environment. The system includes a data collection mechanism. The process is automated through an S7-1200 PLC, which communicates via pressure and volume sensors over a Modbus-TCP network. The data sent to the web server is analyzed by a Machine Learning system and then displayed on a web app. Finally, the system, with the help of a second algorithm, is capable of self-managing by autonomously adjusting the speed of the motors.`,
     href: "https://press.siemens.com/it/it/comunicatostampa/proclamati-i-vincitori-dei-campionati-di-automazione-siemens-2024-tecnologie",
   },
   {
     title: "robotics olympics",
-    date: "2024-11-02",
+    date: "23-05-2023",
     description:
       "Team leader of a project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
   },
@@ -154,7 +154,8 @@ export default function Home() {
             <Link
               to={data[selectedIndex].href}
               target="_blank"
-              className="flex items-center gap-2 text-txLink"
+              className="inline-flex items-center gap-2 text-txLink"
+              onClick={(e) => e.stopPropagation()}
             >
               See details
               <svg

@@ -36,6 +36,7 @@ export default function About() {
                         ))
                     }
                 </div>
+
                 <div className='max-md:hidden'>
                     <h2 className='text-center text-txTitle mb-2'>Commands</h2>
                     {
@@ -44,7 +45,7 @@ export default function About() {
                                 return (
                                     <div key={index} className='flex'>
                                         <span className='w-1/2'>
-                                            <span>:</span>{item.cmd}<span className='text-txLink'>{"<Enter>"}</span>
+                                            <span>:</span>{item.cmd[0]}<span className='text-txLink'>{"<Enter>"}</span>
                                         </span>
                                         <span className='text-txSecondary'>{item.description}</span>
                                     </div>
@@ -52,7 +53,8 @@ export default function About() {
                         })
                     }
                 </div>
-                <span className='text-secondary text-sm card'>Inspired by Neovim</span>
+
+                <span className='text-txSecondary text-sm'>Inspired by Neovim</span>
             </div>
         </div >
     )

@@ -8,6 +8,10 @@ export default function Navbar() {
             href: "/"
         },
         {
+            name: "Skills",
+            href: "/skills"
+        },
+        {
             name: "About",
             href: "/about"
         }
