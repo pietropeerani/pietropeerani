@@ -12,12 +12,13 @@ export default function App() {
   return (
     <Router>
       <main className="h-screen p-4 pb-2 flex flex-col">
-        <section className="relative flex flex-col p-4 pb-2 flex-grow border-2 border-txPrimary">
+        <section className="relative flex flex-col p-4 pb-0 flex-grow border-2 border-txPrimary overflow-hidden">
           <Header />
           <Navbar />
-          <div className="mt-4 relative flex-grow">
+          <div className="mt-4 pb-4 relative flex-grow overflow-auto">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/skills" element={<Skills />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </div>
