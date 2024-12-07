@@ -159,7 +159,7 @@ export default function Command() {
             {
                 showInput && (
                     <form
-                        className="flex border-t border-white pt-2"
+                        className="flex border-t border-white py-2"
                         onSubmit={(event) => {
                             event.preventDefault();
                             const command = commands.find(cmd => cmd.cmd.some(c => c.toLowerCase() === inputValue.trim().toLowerCase()));
