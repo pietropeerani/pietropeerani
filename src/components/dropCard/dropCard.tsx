@@ -9,7 +9,7 @@ export default function DropCard({ children, title }: DropCardProps) {
     const [showTextBlock, setShowTextBlock] = useState(false);
 
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const [dashes, setDashes] = useState('');
+    const [, setDashes] = useState('');
 
     const generateDashes = () => {
         if (containerRef.current) {
