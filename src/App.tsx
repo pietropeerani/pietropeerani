@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/navbar"
 import Footer from "./components/footer/footer"
 import Command from "./components/command/command"
 import Skills from "./pages/skills/skills"
+import NotFound from "./pages/notFound/notFound"
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/about" element={<About />} />
+
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
           <Command />
