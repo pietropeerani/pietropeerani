@@ -20,7 +20,7 @@ const data: dateRow[] = [
     title: "robotics olympics",
     date: "23-05-2023",
     description:
-      "Team leader of a project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
+      "Team leader of  project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
   },
 ];
 
