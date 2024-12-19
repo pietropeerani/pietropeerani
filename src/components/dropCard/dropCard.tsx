@@ -39,7 +39,7 @@ export default function DropCard({ children, title }: DropCardProps) {
                     <path className="fill-txPrimary" d="M2 8H0V6H2V4H4V2H6V0H8V2H10V4H12V6H14V8H12V6H10V4H8V2H6V4H4V6H2V8Z" fill="white"></path>
                 </svg>
                 <span className='text-nowrap text-txTitle'>
-                    -- {title} {/* dashes */}
+                    - [{showTextBlock ? "x": " "}] {title} {/* dashes */}
                 </span>
             </div>
 
