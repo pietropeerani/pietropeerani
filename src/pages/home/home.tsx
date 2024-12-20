@@ -1,32 +1,54 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-interface dateRow {
+interface DateRow {
   title: string;
   date: string;
   image?: string;
   description?: string;
-  href?: string;
+  links?: {
+    href?: string;
+    github?: string;
+  };
 }
 
-const data: dateRow[] = [
+const icons: Record<string, JSX.Element> = {
+  href: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+      <g fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="4" width="4" height="8" rx="1" strokeLinejoin="round" />
+        <rect x="10" y="4" width="4" height="8" rx="1" strokeLinejoin="round" />
+        <path d="M6 8H10" strokeLinecap="square" />
+      </g>
+    </svg>
+  ),
+  github: (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path className="fill-txPrimary" d="M5 2H9V4H7V6H5V2ZM5 12H3V6H5V12ZM7 14H5V12H7V14ZM9 16V14H7V16H3V14H1V16H3V18H7V22H9V18H11V16H9ZM9 16V18H7V16H9ZM15 4V6H9V4H15ZM19 6H17V4H15V2H19V6ZM19 12V6H21V12H19ZM17 14V12H19V14H17ZM15 16V14H17V16H15ZM15 18H13V16H15V18ZM15 18H17V22H15V18Z" fill="white"></path></svg>
+  ),
+};
+
+const data: DateRow[] = [
   {
-    title: "automation olympics",
+    title: "Automation Olympics",
     date: "04-06-2024",
-    description: `The project team leader for a system that simulates the operation of a hydroelectric dam, utilizing two real Pelton and Francis turbines within the school to reproduce the energy generation process in a controlled and safe environment. The system includes a data collection mechanism. The process is automated through an S7-1200 PLC, which communicates via pressure and volume sensors over a Modbus-TCP network. The data sent to the web server is analyzed by a Machine Learning system and then displayed on a web app. Finally, the system, with the help of a second algorithm, is capable of self-managing by autonomously adjusting the speed of the motors.`,
-    href: "https://press.siemens.com/it/it/comunicatostampa/proclamati-i-vincitori-dei-campionati-di-automazione-siemens-2024-tecnologie",
+    description: "The project team leader for a system that simulates the operation of a hydroelectric dam, utilizing two real Pelton and Francis turbines within the school to reproduce the energy generation process in a controlled and safe environment. The system includes a data collection mechanism. The process is automated through an S7-1200 PLC, which communicates via pressure and volume sensors over a Modbus-TCP network. The data sent to the web server is analyzed by a Machine Learning system and then displayed on a web app. Finally, the system, with the help of a second algorithm, is capable of self-managing by autonomously adjusting the speed of the motors.",
+    links: {
+      href: "https://press.siemens.com/it/it/comunicatostampa/proclamati-i-vincitori-dei-campionati-di-automazione-siemens-2024-tecnologie",
+    },
   },
   {
-    title: "robotics olympics",
+    title: "Robotics Olympics",
     date: "23-05-2023",
-    description:
-      "Team leader of  project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
+    description: "Team leader of a project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
+    links: {
+      github: "https://github.com/GalileiIsNao-2023",
+    },
   },
 ];
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [dateColumnWidth, setdateColumnWidth] = useState<number>(0);
+  const [dateColumnWidth, setDateColumnWidth] = useState<number>(0);
   const [isEscPressed, setIsEscPressed] = useState(false);
   const tableRef = useRef<HTMLDivElement | null>(null);
   const dateColumnRef = useRef<HTMLDivElement | null>(null);
@@ -34,7 +56,7 @@ export default function Home() {
   useEffect(() => {
     const handleKeydown = (event: KeyboardEvent) => {
       const isInputFocused = ["input", "textarea", "select"].includes(
-        document.activeElement?.tagName.toLowerCase() ?? ''
+        document.activeElement?.tagName.toLowerCase() ?? ""
       );
 
       if (isInputFocused) {
@@ -46,16 +68,16 @@ export default function Home() {
           prevIndex === data.length - 1
             ? 0
             : prevIndex === null
-            ? 0
-            : Math.min(prevIndex + 1, data.length - 1)
+              ? 0
+              : Math.min(prevIndex + 1, data.length - 1)
         );
       } else if (event.key === "ArrowUp" || event.key === "k") {
         setSelectedIndex((prevIndex) =>
           prevIndex === 0
             ? data.length - 1
             : prevIndex === null
-            ? data.length - 1
-            : Math.max(prevIndex - 1, 0)
+              ? data.length - 1
+              : Math.max(prevIndex - 1, 0)
         );
       } else if (event.key === "Escape") {
         setIsEscPressed(true);
@@ -77,10 +99,7 @@ export default function Home() {
         return;
       }
 
-      if (
-        tableRef.current &&
-        !tableRef.current.contains(event.target as Node)
-      ) {
+      if (tableRef.current && !tableRef.current.contains(event.target as Node)) {
         setSelectedIndex(null);
       }
     };
@@ -99,7 +118,7 @@ export default function Home() {
   useEffect(() => {
     if (dateColumnRef.current) {
       const maxWidth = Math.max(...data.map((row) => row.date.length));
-      setdateColumnWidth(maxWidth * 10);
+      setDateColumnWidth(maxWidth * 10);
     }
   }, []);
 
@@ -117,9 +136,10 @@ export default function Home() {
               width: `${dateColumnWidth}px`,
             }}
           >
-            date
+            Date
           </div>
-          <div className="flex-1">title</div>
+          <div className="flex-1">Title</div>
+          <div className="flex-1"></div>
         </div>
         {data.map((row, index) => (
           <div
@@ -135,6 +155,19 @@ export default function Home() {
           >
             <div className="text-txSecondary flex-1">{row.date}</div>
             <div className="flex-1">{row.title}</div>
+            <div className="flex-1 inline-flex gap-2">
+              {row.links &&
+                Object.entries(row.links).map(([key, link]) => (
+                  link && (
+                    <div
+                      key={key}
+                      className="inline-flex items-center gap-2 text-txLink"
+                    >
+                      {icons[key]}
+                    </div>
+                  )
+                ))}
+            </div>
           </div>
         ))}
       </div>
@@ -144,15 +177,36 @@ export default function Home() {
           <h1 className="text-txTitle"># {data[selectedIndex].title}</h1>
           {data[selectedIndex].image && (
             <div className="aspect-video overflow-hidden flex items-center justify-center">
-              <img src={data[selectedIndex].image} alt="" />
+              <img src={data[selectedIndex].image} alt="Project Image" />
             </div>
           )}
+          {data[selectedIndex].links &&
+            Object.entries(data[selectedIndex].links)
+              .filter(([key, link]) => link && key !== "href")
+              .length > 0 && (
+              <div className="inline-flex gap-2">
+                {Object.entries(data[selectedIndex].links)
+                  .filter(([key, link]) => link && key !== "href")
+                  .map(([key, link]) => (
+                    <Link
+                      key={key}
+                      to={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-txLink"
+                    >
+                      {icons[key]}
+                    </Link>
+                  ))}
+              </div>
+            )}
+
           {data[selectedIndex].description && (
             <p>{data[selectedIndex].description}</p>
           )}
-          {data[selectedIndex].href && (
+          {data[selectedIndex].links?.href && (
             <Link
-              to={data[selectedIndex].href}
+              to={data[selectedIndex].links.href}
               target="_blank"
               className="inline-flex items-center gap-2 text-txLink"
               onClick={(e) => e.stopPropagation()}
