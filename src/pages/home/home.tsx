@@ -38,6 +38,14 @@ const data: DateRow[] = [
   },
   {
     title: "Robotics Olympics",
+    date: "22-03-2024",
+    description: "This NAO-powered e-commerce system ranked second at the 2024 Italian National Robotics Olympics for its innovative approach to combining human-robot interaction with online shopping. Designed to enhance accessibility, it enables people with disabilities to achieve greater independence and inclusion in society.",
+    links: {
+      github: "https://github.com/GalileiIsNao-2024",
+    },
+  },
+  {
+    title: "Robotics Olympics",
     date: "23-05-2023",
     description: "Team leader of a project focused on recycling. A bin was built using a LEGO structure, equipped with a camera that could detect the material type of an object. The project was then presented as a game for children within the context of education on waste separation.",
     links: {
