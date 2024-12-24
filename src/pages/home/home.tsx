@@ -163,7 +163,7 @@ export default function Home() {
           >
             <div className="text-txSecondary flex-1">{row.date}</div>
             <div className="flex-1">{row.title}</div>
-            <div className="flex-1 inline-flex gap-2">
+            <div className="flex-1 inline-flex gap-2 max-md:justify-end">
               {row.links &&
                 Object.entries(row.links).map(([key, link]) => (
                   link && (
