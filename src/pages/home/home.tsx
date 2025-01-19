@@ -131,7 +131,7 @@ export default function Home() {
     <div className="flex max-md:flex-col justify-between">
       <div
         ref={tableRef}
-        className="h-fit flex flex-col w-3/5 max-md:w-full table-auto"
+        className="h-fit flex flex-col w-3/5 max-md:w-full table-auto sticky top-0"
       >
         <div className="border-b border-white font-bold flex pb-2 mb-2">
           <div
