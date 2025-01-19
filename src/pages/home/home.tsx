@@ -68,6 +68,7 @@ export default function Home() {
       }
 
       if (event.key === "ArrowDown" || event.key === "j") {
+        event.preventDefault()
         setSelectedIndex((prevIndex) =>
           prevIndex === data.length - 1
             ? 0
