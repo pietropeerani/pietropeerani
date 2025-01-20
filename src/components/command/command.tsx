@@ -155,7 +155,7 @@ export default function Command() {
     return (
         <div className="relative">
             {errorMessage && (
-                <div className="error-message text-red-500">{errorMessage}</div>
+                <div className="error-message text-red-500 py-2">{errorMessage}</div>
             )}
             {
                 showInput && (
