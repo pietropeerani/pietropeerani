@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { version } from '../../../package.json'
 import { commands } from '../../components/command/command'
+import { githubProfile, instagram } from '../../utils/personalData'
 
 interface socialProps {
     [key: string]: {
@@ -13,11 +14,11 @@ export default function About() {
     const social: socialProps = {
         Instagram: {
             user: "@pietro.peerani",
-            href: "https://instagram.com/pietro.peerani"
+            href: instagram
         },
         Github: {
             user: "@pietropeerani",
-            href: "https://github.com/pietropeerani"
+            href: githubProfile
         }
     }
 

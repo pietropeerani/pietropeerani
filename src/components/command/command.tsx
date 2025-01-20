@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { instagram } from '../../utils/personalData';
 
 interface commandsProps {
     cmd: string[];
@@ -21,7 +22,7 @@ export const commands: commandsProps[] = [
         cmd: ['instagram', 'insta'],
         description: 'Displays information about the app',
         action: () => {
-            window.open("https://instagram.com/pietro.peerani", "_blank");
+            window.open(instagram, "_blank");
         }
     },
 ];

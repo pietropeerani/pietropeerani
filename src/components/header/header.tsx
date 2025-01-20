@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { githubProfile, githubRepo } from "../../utils/personalData";
 
 export default function Header() {
     let name = () => (
@@ -21,7 +22,7 @@ export default function Header() {
         {
             label: "Handle",
             value: "@pietro",
-            href: "https://github.com/pietropeerani",
+            href: githubProfile,
             _blank: true
         }
     ]
@@ -29,7 +30,7 @@ export default function Header() {
     const social = [
         {
             name: "GitHub",
-            href: "https://github.com/pietropeerani/pietropeerani",
+            href: githubRepo,
             icon:
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className="fill-txPrimary" d="M5 2H9V4H7V6H5V2ZM5 12H3V6H5V12ZM7 14H5V12H7V14ZM9 16V14H7V16H3V14H1V16H3V18H7V22H9V18H11V16H9ZM9 16V18H7V16H9ZM15 4V6H9V4H15ZM19 6H17V4H15V2H19V6ZM19 12V6H21V12H19ZM17 14V12H19V14H17ZM15 16V14H17V16H15ZM15 18H13V16H15V18ZM15 18H17V22H15V18Z" fill="white" />
