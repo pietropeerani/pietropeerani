@@ -19,7 +19,7 @@ export default function DinamicSlot({ data }: DinamicSlotProps) {
 
   return (
     <div>
-      <div className='flex max-w-full overflow-x-scroll'>
+      <div className='table max-w-full overflow-x-scroll p-0'>
         {data.map((tab, index) => (
           <button
             key={index}
