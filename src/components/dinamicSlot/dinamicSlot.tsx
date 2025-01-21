@@ -19,16 +19,18 @@ export default function DinamicSlot({ data }: DinamicSlotProps) {
 
   return (
     <div>
-      <div className='table max-w-full overflow-x-scroll p-0'>
-        {data.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => handleTabClick(index)}
-            className={`p-1 text-sm text-txLink ${activeTab === index ? 'bg-txLink !text-body' : 'bg-transparent'}`}
-          >
-            [{tab.title}]
-          </button>
-        ))}
+      <div className='overflow-scroll'>
+        <div className='table whitespace-nowrap max-w-full overflow-x-auto p-0'>
+          {data.map((tab, index) => (
+            <button
+              key={index}
+              onClick={() => handleTabClick(index)}
+              className={`p-1 text-sm text-txLink ${activeTab === index ? 'bg-txLink !text-body' : 'bg-transparent'}`}
+            >
+              [{tab.title}]
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="w-full max-md:my-2 h-fit p-4 cursor-default border border-windowBorder bg-windowBg flex flex-col gap-4">
