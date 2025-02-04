@@ -4,7 +4,7 @@ export default function NotFound() {
     const menu = [
         {
             name: "My Projects",
-            href: "/"
+            href: "/projects"
         },
         {
             name: "About",
@@ -21,8 +21,8 @@ export default function NotFound() {
                     </svg>
                 </div>
 
-                <div className="flex flex-col items-center">
-                    <p>Nothing happens here</p>
+                <div className="flex flex-col items-center text-center">
+                    <p>Nothing happens here!</p>
                     <p>But there is something neat over there:</p>
                 </div>
 
