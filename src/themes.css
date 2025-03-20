@@ -23,6 +23,9 @@
 
   --window-bg: #323232;
   --window-border: #fff; 
+
+  --gram-default: #262626;
+  --gram-hover: #FFDDC0;
 }
 
 [data-theme="light"] {
@@ -46,6 +49,9 @@
 
   --window-bg: #eee;
   --window-border: #323232;
+
+  --gram-default: #eee;
+  --gram-hover: #fd994280;
 }
 
 [data-theme="gruvbox"] {
@@ -69,6 +75,9 @@
 
   --window-bg: #3c383680;
   --window-border: #505954;
+
+  --gram-default: #504945;
+  --gram-hover: #fbf1c7;
 }
 
 [data-theme="catppuccin"] {
@@ -92,4 +101,7 @@
 
   --window-bg: #3c383680;
   --window-border: #313244;
+
+  --gram-default: #3c383680;
+  --gram-hover: #cba6f7;
 }
