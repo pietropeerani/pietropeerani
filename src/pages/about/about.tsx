@@ -23,8 +23,8 @@ export default function About() {
     }
 
     return (
-        <div className="h-full flex items-center justify-center">
-            <div className='w-72 flex flex-col gap-8'>
+        <div className="h-full max-lg:my-20 flex items-center justify-center">
+            <div className='w-full max-w-96 flex flex-col gap-8'>
                 <h1 className='text-center text-txTitle'>About page v{version}</h1>
                 <div>
                     <h2 className='text-center text-txTitle mb-2'>Me on the web</h2>
@@ -40,6 +40,12 @@ export default function About() {
 
                 <div className='max-md:hidden'>
                     <h2 className='text-center text-txTitle mb-2'>Commands</h2>
+                    <div className='flex'>
+                        <span className='w-1/2'>
+                            f1
+                        </span>
+                        <span className='text-txSecondary'>Help</span>
+                    </div>
                     {
                         commands.map((item, index) => {
                             if (item.render)
