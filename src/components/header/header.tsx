@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { githubProfile, githubRepo } from "../../utils/personalData";
+import { email, githubProfile, githubRepo } from "../../utils/personalData";
 
 export default function Header() {
     let name = () => (
@@ -29,7 +29,15 @@ export default function Header() {
 
     const social = [
         {
-            name: "GitHub",
+            label: "Build something togheder",
+            href: `mailto:${email}`,
+            icon:
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path className="fill-txPrimary" d="M3 2H21V16H19V18H17V16H15V18H17V20H15V22H3V2ZM5 4V20H13V14H19V4H5Z" fill="white" />
+                </svg>
+        },
+        {
+            label: "GitHub",
             href: githubRepo,
             icon:
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,9 +50,9 @@ export default function Header() {
     return (
         <div className="flex max-md:flex-col-reverse max-md:gap-4 justify-between mb-4">
             <div className="flex gap-8 items-center">
-                <div>
+                <Link to={"/"}>
                     {name()}
-                </div>
+                </Link>
                 <div className="w-60 max-md:hidden">
                     {
                         data.map((item, index) => {
@@ -65,17 +73,17 @@ export default function Header() {
                 </div>
             </div>
 
-            <div>
+            <div className="flex gap-2 sm:gap-4 max-sm:flex-col">
                 {
                     social.map((item, index) => (
                         <span key={index}>
-                            <a
-                                href={item.href}
+                            <Link
+                                to={item.href}
                                 target="_blank"
-                                className="flex justify-center items-center gap-2">
+                                className="flex justify-center items-center gap-2 text-sm text-txLink">
                                 {item.icon}
-                                {item.name}
-                            </a>
+                                {item.label}
+                            </Link>
                         </span>
                     ))
                 }
