@@ -54,7 +54,7 @@ export default function ThemeChanger() {
             {isMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="absolute bottom-full mb-2 max-md:right-[-1px] w-48 bg-body text-white border-2 border-txPrimary"
+                    className="absolute bottom-full right-0 mb-2 max-md:right-[-1px] w-48 bg-body text-white border-2 border-txPrimary"
                 >
                     <ul className="list-none">
                         {
