@@ -27,6 +27,10 @@ export default function Skills() {
                 The backend of a website refers to the server-side part that manages data, handles requests, and ensures smooth communication between the frontend and databases. It typically involves server technologies like Node.js, Python, Ruby, PHP, and databases like MySQL or MongoDB. The backend's primary role is to process user requests, manage data storage and retrieval, and ensure security and performance. A strong backend is critical for handling business logic, user authentication, and delivering dynamic content efficiently and securely to users.
                 <DinamicSlot data={backendTabsData} />
             </DropCard>
+
+            <DropCard title='PLC programmer'>
+                PLC programmer with experience in designing and managing automated systems. I specialize in developing tailor-made solutions to optimize plants and industrial processes, always with a focus on efficiency and safety.
+            </DropCard>
         </>
     )
 };
