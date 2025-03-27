@@ -15,8 +15,7 @@ I’m always open to feedback and collaborations, so feel free to reach out if y
 ![My Skills](https://skillicons.dev/icons?i=js,ts,css,sass,svelte,react,next,angular,electron,tailwind)
 ![My Skills](https://skillicons.dev/icons?i=php,azure,python,c,cpp,raspberrypi,vscode,figma,xd,arch)
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-00A67E?style=for-the-badge&logo=codecrafters&logoColor=white)](https://pietropeerani.github.io/pietropeerani/)
-[![Resume](https://img.shields.io/badge/Resume-FFFFFF?style=for-the-badge&logo=googledocs&logoColor=black)](#)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00A67E?style=for-the-badge&logo=codecrafters&logoColor=white)](https://www.pietropeerani.com/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/pietro.peerani)
 
 ---
