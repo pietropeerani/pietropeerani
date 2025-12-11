@@ -1,35 +1,27 @@
-### 👋 Hi there
-<div>
-    <img src="./public/dino.gif"/>
-</div>
-<br/>
+<h1 align="center">
+  Pietro Peerani
+</h1>
 
+Hi, I'm **Pietro**, a Computer Science student at **UniFe** with a strong passion for technology, programming, and especially **algorithms**.
 
-I'm **Pietro**, a student at UniFe, studying Computer Science. I'm passionate about technology and programming, with a particular interest in web development and algorithms.
-I’m always open to feedback and collaborations, so feel free to reach out if you want to discuss technology or exchange ideas!
+I really enjoy **software development**, particularly exploring Linux systems, tools, and libraries. I love building projects, experimenting with new technologies, and continuously learning. Most of my personal and open-source work is available here on GitHub.
+
+I'm always open to feedback, collaborations, and discussions—so feel free to reach out if you’d like to talk tech or exchange ideas!
+
+**Get in touch:**
+
+* [LinkedIn](https://it.linkedin.com/in/pietro-peerani-5a85552a5)
+* [Email](mailto:pietro.peerani@gmail.com)
+
+You can also visit my **[website](https://pietropeerani.com)**.
+
+Below you’ll find a selection of my projects. You can also [click here to browse them by category](https://pietropeerani.github.io/repo-graph/):
+
 
 ---
-
-
-### Skills
-![My Skills](https://skillicons.dev/icons?i=js,ts,css,sass,svelte,react,next,angular,electron,tailwind)
-![My Skills](https://skillicons.dev/icons?i=php,azure,python,c,cpp,raspberrypi,vscode,figma,xd,arch)
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-00A67E?style=for-the-badge&logo=codecrafters&logoColor=white)](https://www.pietropeerani.com/)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/pietro.peerani)
-
----
-
-### 📊 Github Status
-![](https://github-readme-stats.vercel.app/api?username=pietropeerani&theme=dark&hide_border=true&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=pietropeerani&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
-
----
-
 <details>
   <summary><i>footer</i></summary>
   
    *Instagram* > <a href="https://instagram.com/pietro.peerani">pietro.peerani</a> <br/>
    *Github* > here <br/>
-
 </details>
