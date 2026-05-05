@@ -17,6 +17,10 @@ You can also visit my **[website](https://pietropeerani.com)**.
 
 Below you’ll find a selection of my projects. You can also [click here to browse them by category](https://pietropeerani.github.io/repo-graph/):
 
+- **[basilite](https://github.com/basilite/server)** - MQTT client, websocket server, data storage in C.
+
+* **[jiramo](https://github.com/jiramo/jiramo)** – Jiramo · The #1 CRM built for developers.
+
 * **[simplefolio](https://github.com/pietropeerani/simplefolio)** – a next.js template for building clean and modern developer portfolios.
 
 * **[pomo app](https://github.com/pietropeerani/pomo-app)** – a terminal-based pomodoro technique application written in c.
